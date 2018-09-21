@@ -14,7 +14,6 @@ body .ui-dataview .ui-dataview-header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: url('/assets/images/icon_map@2x.png');
   background-repeat: no-repeat;
   background-position:right bottom;
 }

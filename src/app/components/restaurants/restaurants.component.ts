@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { RestaurantsService } from '../../services/restaurants.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-restaurants',
@@ -14,6 +15,7 @@ export class RestaurantsComponent implements OnInit {
   options: any;
   overlays: any[];
   map: google.maps.Map;
+  icon: string = environment.contextUrl + 'assets/images/icon_map@2x.png';
   
   constructor(private restaurantsService: RestaurantsService) {
     this.display = false;
