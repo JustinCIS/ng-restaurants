@@ -1,0 +1,41 @@
+<p-dataView [value]="restaurants">
+  <p-header>
+    <div class="header-content">
+      Lunch Tyme
+    </div>
+  </p-header>
+
+  <ng-template let-restaurant pTemplate="listItem">
+    <div class="p-grid restaurant-items" (click)="showRestaurantDetails(restaurant)" [style.background-image]="'url(' + restaurant.backgroundImageURL + ')'">
+      <div class="p-col-12 restaurant-labels" >
+        <span class="restaurant-category">{{restaurant.category}}</span>
+        <span class="restaurant-name">{{restaurant.name}}</span>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>
+
+<div class="ui-sidebar-full">
+  <p-sidebar [(visible)]="display" [style]="{width:'98%'}">
+    <div class="p-grid" style="display:flex">
+      <div class="p-col-12 header-content">
+        Lunch Tyme
+      </div>
+      <div class="p-col-12">
+        <p-gmap [options]="options" [overlays]="overlays" [style]="{'width':'100%','height':'320px'}" (onMapReady)="setMap($event)"></p-gmap>
+      </div>
+      <div class="p-grid details-header">
+        <div class="p-col-12">
+          <span class="restaurant-name">{{selectedRestaurant?.name}}</span><br />
+          <span class="restaurant-category">{{selectedRestaurant?.category}}</span>
+        </div>
+      </div>
+      <div class="p-grid" style="padding:16px 0px 0px 12px">
+        <div class="p-col-12 details-contact">{{selectedRestaurant?.location?.address}}</div>
+        <div class="p-col-12 details-contact">{{selectedRestaurant?.location?.city}}, {{selectedRestaurant?.location?.state}} {{selectedRestaurant?.location?.postalCode}}</div>
+        <div class="p-col-12 details-contact details-phone">{{selectedRestaurant?.contact?.phone}}</div>
+        <div class="p-col-12 details-contact">{{selectedRestaurant?.contact?.twitter ? '@' + selectedRestaurant?.contact?.twitter : '' }}</div>
+        </div>
+      </div>
+</p-sidebar>
+</div>

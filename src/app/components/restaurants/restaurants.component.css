@@ -1,0 +1,67 @@
+body .ui-dataview .ui-dataview-header {
+  background-color: #43e895 !important;
+}
+
+.header-content {
+  font-family: 'Avenir Next Demi Bold';
+  padding: 25px 0px 0px 0px;
+  color: #fff;
+  font-size: 17px;
+  background-color: #43E895;
+  height: 80px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-image: url('/assets/images/icon_map@2x.png');
+  background-repeat: no-repeat;
+  background-position:right bottom;
+}
+
+.restaurant-items {
+  width: 320px !important;
+  height: 180px;
+  padding: 0px 0px 0px 16px;
+  display: flex
+}
+
+.restaurant-labels {
+  display: inline-flex;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
+.restaurant-name {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Avenir Next Demi Bold';
+  margin-bottom: 6px;
+}
+
+.restaurant-category {
+  color: #fff;
+  font-size: 12px;
+  font-family: 'Avenir Next Regular';
+  margin-bottom: 6px;
+}
+
+.details-header {
+  background-color: #34B379;
+  height: 60px;
+  padding: 0px 0px 0px 12px;
+  width: 100%
+}
+
+.details-contact {
+  font-family: 'Avenir Next Regular';
+  font-size: 16px;
+  color: #2A2A2A;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.details-phone {
+  padding-top: 26px;
+  padding-bottom: 26px
+}
